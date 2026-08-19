@@ -5,24 +5,20 @@
 // TODO:
 // Reescreva as funções abaixo utilizando arrow functions.
 
-function somar(a, b) {
-  return a + b;
-}
+//const somar = (parametos) => a+b
+const somar = (a,b) => a+b
+const subtrair = (a,b) => a-b
+const multiplicar = (a,b) => a*b
+const dividir = (a,b) => b===0?'erro':a/b
 
-function subtrair(a, b) {
-  return a - b;
-}
+const calcular = (a,b,operacao) => {
+ if (operacao === 'soma') return somar(a,b);
+ if (operacao === 'subtrair') return subtrair(a,b);
+ if (operacao === 'multiplicar') return multiplicar(a,b);
+ if (operacao === 'dividir') return dividir(a,b);
 
-function multiplicar(a, b) {
-  return a * b;
-}
-
-function dividir(a, b) {
-  if (b === 0) {
-    return "Não é possível dividir por zero";
-  }
-
-  return a / b;
+ return "operação invalida"
+  
 }
 
 // TODO:
@@ -30,3 +26,5 @@ function dividir(a, b) {
 
 // TODO:
 // Crie uma arrow function calcular() mantendo o comportamento do exercício anterior.
+
+//Exemplo de arrowfuncrion Const soma=()=>a+b

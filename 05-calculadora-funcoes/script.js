@@ -3,26 +3,35 @@
 */
 
 function somar(a, b) {
-  // TODO
+  return a+b
 }
 
 function subtrair(a, b) {
-  // TODO
+  return a-b
 }
 
 function multiplicar(a, b) {
-  // TODO
+  return a*b
 }
 
 function dividir(a, b) {
-  // TODO:
-  // Trate divisão por zero.
+  return a/b
 }
 
 function calcular(a, b, operacao) {
-  // TODO:
-  // Escolha a função correta conforme a operação.
-  // Trate também uma operação desconhecida.
+  if (operacao === 'somar'){
+    return somar(a,b)
+  }else if (operacao === 'subtrair'){
+    return subtrair(a,b)
+  } else if (operacao === 'multiplicar'){
+    return multiplicar(a,b)
+  }else if (operacao === 'dividir'){
+    return dividir(a,b)
+  }else{
+    return"erro! operação invalida"
+  }
+
+  //a melhor solução seria um switecase
 }
 
 // TODO:
