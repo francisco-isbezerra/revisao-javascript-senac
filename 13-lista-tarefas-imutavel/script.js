@@ -11,12 +11,22 @@ const tarefas = [
 function adicionarTarefa(lista, novaTarefa) {
   // TODO:
   // Retorne um NOVO array incluindo novaTarefa.
+  return{
+    ...tarefas,
+    novaTarefa
+  }
+  
 }
 
 function concluirTarefa(lista, id) {
   // TODO:
   // Retorne um NOVO array.
   // Altere apenas a tarefa correspondente ao id.
+  return lista.map((tarefa)=>
+    tarefa.id == id
+    ? {...tarefa,concluida: true}
+    : tarefa
+  )
 }
 
 function removerTarefa(lista, id) {
